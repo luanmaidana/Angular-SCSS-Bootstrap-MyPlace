@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+}
+
+.navbar td{
+
+    padding-left: 25px;
+}
+
+.navbar a{
+    width: 100px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.login-registrar {
+    display: flex;
+    width: 20%;
+    justify-content: end;
+
+}
+
+.login-registrar td{
+    
+    padding-left: 25px;
+    
+
+}

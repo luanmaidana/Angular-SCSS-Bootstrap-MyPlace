@@ -1,0 +1,17 @@
+.footer {
+
+    background-color: #3f51b5;
+    height: 50px;
+    display: flex;
+    margin-top: auto;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.copyright-footer {
+    color: #fff;
+    flex-direction: row-reverse;
+}

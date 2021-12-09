@@ -1,0 +1,32 @@
+.container {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container-cadastro {
+
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 1px 5px 16px -2px rgba(6,3,10,0.55); 
+    box-shadow: 1px 5px 16px -2px rgba(6,3,10,0.55);    
+}
+
+.dp-group {
+
+    
+}
+
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
