@@ -1,9 +1,5 @@
 <div class="container-filter">
-    <div class="filter">
-        <td>
-            <button mat-raised-button color="accent">Adicionar</button>
-        </td>
-        
+    <div class="filter">       
         <td>
             <mat-form-field appearance="standard">
             <mat-label>Pesquisar</mat-label>
@@ -19,27 +15,36 @@
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       
         <!-- Position Column -->
-        <ng-container matColumnDef="position">
-          <th mat-header-cell *matHeaderCellDef> No. </th>
-          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Id. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
         </ng-container>
       
         <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef> Nome </th>
+          <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
         </ng-container>
       
         <!-- Weight Column -->
-        <ng-container matColumnDef="weight">
-          <th mat-header-cell *matHeaderCellDef> Weight </th>
-          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        <ng-container matColumnDef="descricao">
+          <th mat-header-cell *matHeaderCellDef> Descricão </th>
+          <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
         </ng-container>
       
         <!-- Symbol Column -->
-        <ng-container matColumnDef="symbol">
-          <th mat-header-cell *matHeaderCellDef> Symbol </th>
-          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        <ng-container matColumnDef="valor">
+          <th mat-header-cell *matHeaderCellDef> Valor </th>
+          <td mat-cell *matCellDef="let element">R$ {{element.valor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef>Delete</th>
+            <td mat-cell>
+              <button mat-icon-button aria-label="Example icon-button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+              </button>
+            </td>   
         </ng-container>
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -49,6 +54,7 @@
         <tr class="mat-row" *matNoDataRow>
           <td style="color: red;" class="mat-cell" colspan="4">Nenhum resultado encontrado "{{input.value}}"</td>
         </tr>
+
       </table>
 
 </div>

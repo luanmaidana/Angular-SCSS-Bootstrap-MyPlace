@@ -4,16 +4,17 @@
     align-items: center;
     width: 100%;
 }
+
 table {
+    width: 100%;
     margin-bottom: 20px;
-    width: 1200px;
-    height: 600px;
+     width: 1200px;
   }
   
-.mat-form-field {
+  .mat-form-field {
     font-size: 14px;
     width: 100%;
-}
+  }
 
 .container-filter {
     display: flex;

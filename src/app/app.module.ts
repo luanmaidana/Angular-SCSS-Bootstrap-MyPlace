@@ -17,6 +17,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { ListaProdutosComponent } from './views/produtos/lista-produtos/lista-produtos.component';
 import {MatTableModule} from '@angular/material/table';
 import { ProdutoService } from './views/produtos/produtoService';
+import { HttpClientModule } from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { ProdutoService } from './views/produtos/produtoService';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
+    MatIconModule
     
   ],
   providers: [
