@@ -1,36 +1,50 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ListaProdutosComponent } from './views/produtos/lista-produtos/lista-produtos.component';
-import { ProdutoService } from './views/produtos/produtoService';
 import { HttpClientModule } from '@angular/common/http';
-import { UserLoginComponent } from './views/user-login/user-login.component';
-
+import { APP_BASE_HREF } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { routes } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserService } from './user/userService';
+import { MenuComponent } from './base/menu/menu.component';
+import { MenuUserComponent } from './user/menu/menu.user.component';
+import { LoginComponent } from './user/login/login.component';
+import { ListaComponent } from './produtos/lista/lista.component';
+import { CadastroComponent } from './produtos/cadastro/cadastro.component';
+import { ProdutoService } from './produtos/services/produtoService';
+import { AuthGuard } from './auth/auth.guard';
+import { HomeComponent } from './views/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ListaProdutosComponent,
-    UserLoginComponent
+    CadastroComponent,
+    ListaComponent,
+    LoginComponent,
+    MenuUserComponent,
+    MenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule    
+    [RouterModule.forRoot(routes, {useHash: false})]    
   ],
   providers: [
-    ProdutoService
+    UserService,
+    ProdutoService,
+    AuthGuard,
+    {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]
 })

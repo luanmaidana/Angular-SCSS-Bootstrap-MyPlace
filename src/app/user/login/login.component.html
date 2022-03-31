@@ -1,0 +1,55 @@
+<!-- <div class="formContainer">
+  <h1>Login :</h1>
+  <form [formGroup]="userForm" (ngSubmit)="login()">
+    <input type="text" placeholder="Nome de usuário"  formControlName="email" name="email"required>
+    <input type="password" placeholder="Senha" formControlName="senha" form name="senha" required>
+    <div class="submit">
+      <button (click)="login()">
+        Entrar
+      </button>
+
+      <a href="#">
+        <span>Esqueceu a senha ?</span>
+      </a>
+    </div>
+  </form>
+</div> -->
+
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icone Leão -->
+    <div class="fadeIn first">
+      <img src="https://images.bonanzastatic.com/afu/images/b8af/d55a/7563_10190749346/Lion_02.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Formulário login -->
+    <form [formGroup]="userForm" (ngSubmit)="login()">
+      <input type="text" id="login" formControlName="email" class="fadeIn second" name="login" placeholder="email">
+      <input type="text" id="password" formControlName="senha" class="fadeIn third" name="login" placeholder="senha">
+      <input (click)="login()" type="submit" class="fadeIn fourth" value="Login">
+    </form>
+
+    <!-- Esqueci senha e cadastrar -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Esqueci minha senha</a>
+      <a class="underlineHover" href="/registrar-usuario">Cadastrar</a>
+    </div>
+    
+
+  </div>
+</div>
+
+      <div class="alert alert-danger" *ngIf="errors.length > 0">
+        <h3 id="msgRetorno">Opa! Alguma coisa não deu certo:</h3>
+        <ul>
+          <li *ngFor="let error of errors">{{ error }}</li>
+        </ul>
+      </div>
+
